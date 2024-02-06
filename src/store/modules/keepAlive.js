@@ -15,7 +15,7 @@ const useKeepAliveStore = defineStore('keepAlive', {
   actions: {
 
     addKeepAlive (component) {
-      if (component.path.indexOf('maIframe') > -1) {
+      if (component.path.indexOf('easyIframe') > -1) {
         return
       }
       if (! this.keepAlives.includes(component.name)) {

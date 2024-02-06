@@ -22,7 +22,7 @@
           :title="info.title"
           :columns="info.child"
           :data="infoData"
-          ref="maInfoRefs"
+          ref="easyInfoRefs"
       ></easy-info>
       <a-descriptions
        :title="info.title"
@@ -71,7 +71,7 @@ setModalSizeEvent((config) => {
   isFull.value = config.isFull
 })
 
-const maInfoRefs = ref([])
+const easyInfoRefs = ref([])
 const layout = ref([])
 const infoData = ref({})
 const form = ref({})

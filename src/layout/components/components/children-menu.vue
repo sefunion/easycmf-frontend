@@ -8,13 +8,13 @@
           @click="routerPush(menu)"
         >
           <template #icon v-if="menu.meta.icon">
-            <component :is="menu.meta.icon" :class="menu.meta.icon.indexOf('ma') > 0 ? 'icon' : ''" />
+            <component :is="menu.meta.icon" :class="menu.meta.icon.indexOf('easy') > 0 ? 'icon' : ''" />
           </template>
           {{ appStore.i18n ? ( $t(`menus.${menu.name}`).indexOf('.') > 0 ? menu.meta.title : $t(`menus.${menu.name}`) ) : menu.meta.title }}
         </a-menu-item>
         <a-sub-menu v-else :key="menu.name">
           <template #icon v-if="menu.meta.icon">
-            <component :is="menu.meta.icon" :class="menu.meta.icon.indexOf('ma') > 0 ? 'icon' : ''" />
+            <component :is="menu.meta.icon" :class="menu.meta.icon.indexOf('easy') > 0 ? 'icon' : ''" />
           </template>
           <template #title @click="routerPush(menu.path)">
             {{ appStore.i18n ? ( $t(`menus.${menu.name}`).indexOf('.') > 0 ? menu.meta.title : $t(`menus.${menu.name}`) ) : menu.meta.title }}

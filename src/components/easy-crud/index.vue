@@ -315,7 +315,7 @@ const init = async () => {
 
   // 设置 组件id
   if (isUndefined(options.value.id)) {
-    options.value.id = 'MaCrud_' + Math.floor(Math.random() * 100000 + Math.random() * 20000 + Math.random() * 5000)
+    options.value.id = 'EasyCrud_' + Math.floor(Math.random() * 100000 + Math.random() * 20000 + Math.random() * 5000)
   }
 
   // 收集数据
