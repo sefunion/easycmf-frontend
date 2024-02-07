@@ -125,7 +125,7 @@ export default {
   formOption: {
     // 显示方式支持模态框和抽屉: modal drawer tag
     viewType: 'modal',
-    // 只有 viewType 为 tag 时生效，此值在所有 MaCrud 内唯一
+    // 只有 viewType 为 tag 时生效，此值在所有 EasyCrud 内唯一
     tagId: '',
     // 只有 viewType 为 tag 时生效，tag标题名称
     tagName: '',

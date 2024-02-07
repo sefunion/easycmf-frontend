@@ -1,6 +1,6 @@
 <template>
   <a-layout-content class="work-area customer-scrollbar relative">
-    <div class="h-full" :class="{ 'p-3': $route.path.indexOf('maIframe') === -1 }">
+    <div class="h-full" :class="{ 'p-3': $route.path.indexOf('easyIframe') === -1 }">
       <router-view v-slot="{ Component }">
         <transition :name="appStore.animation" mode="out-in">
           <keep-alive :include="keepStore.keepAlives">

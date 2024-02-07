@@ -45,7 +45,7 @@ export const toHump = (str) => {
 
 export const getComponentName = (formType) => {
   if (containerItems.includes(formType)) {
-    return `Ma${toHump(formType)}`
+    return `Easy${toHump(formType)}`
   }
   if (pickerType.includes(formType)) {
     return 'EasyFormPicker'
@@ -53,7 +53,7 @@ export const getComponentName = (formType) => {
   if (inputType.includes(formType)) {
     return 'EasyFormInput'
   }
-  return (`MaForm${toHump(formType)}`)
+  return (`EasyForm${toHump(formType)}`)
 }
 
 export const handleFlatteningColumns = (data, columns, isChildrenForm = undefined) => {

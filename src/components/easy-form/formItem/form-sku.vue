@@ -140,7 +140,7 @@
 import {inject, onMounted, reactive, ref, watch} from 'vue'
 // 引入处理索引的函数
 import {get, set} from 'lodash'
-// 引入 MaFormItem 组件
+// 引入 EasyFormItem 组件
 import EasyFormItem from './form-item.vue'
 // 引入处理事件的函数
 import {easyEvent} from '../js/formItemMixin.js'

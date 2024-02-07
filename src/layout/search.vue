@@ -30,7 +30,7 @@
               @click="gotoPage(res)"
             >
               <div class="icon-box flex justify-center items-center">
-                <component v-if="res.meta.icon" :is="res.meta.icon" :class="res.meta.icon.indexOf('ma') > 0 ? 'icon' : ''" />
+                <component v-if="res.meta.icon" :is="res.meta.icon" :class="res.meta.icon.indexOf('easy') > 0 ? 'icon' : ''" />
                 <icon-menu v-else />
               </div>
               <div class="ml-5 leading-6">

@@ -62,7 +62,7 @@
 
   arcodesignIcons.pop()
 
-  const modules = import.meta.glob('../../assets/easy-icons/*.vue',{'eager':true})
+  const modules = import.meta.glob('../../assets/easy-icons/*.vue',{eager: true})
   for (const path in modules) {
     const name = path.match(/([A-Za-z0-9_-]+)/g)[2]
     easycmfIcons.push(`EasyIcon${name}`)

@@ -55,10 +55,7 @@
 </template>
 
 <script setup>
-import {
-  ref, watch, provide,
-  onMounted, nextTick, getCurrentInstance
-} from 'vue'
+import { ref, watch, provide, onMounted, nextTick, getCurrentInstance } from 'vue'
 import { isNil, get } from 'lodash'
 import defaultOptions from './js/defaultOptions.js'
 import {
@@ -71,12 +68,12 @@ import arrayComponentDefault from './js/defaultArrayComponent.js'
 import { easyEvent } from './js/formItemMixin.js'
 import { Message } from '@arco-design/web-vue'
 
-const containerList = import.meta.globEager('./containerItem/*.vue')
-const componentList = import.meta.globEager('./formItem/*.vue')
+const containerList = import.meta.glob('./containerItem/*.vue',{eager: true})
+const componentList = import.meta.glob('./formItem/*.vue',{eager: true})
 const _this = getCurrentInstance().appContext
 for (const path in containerList) {
   const name = path.match(/([A-Za-z0-9_-]+)/g)[1]
-  const containerName = `Ma${toHump(name)}`
+  const containerName = `Easy${toHump(name)}`
   if (! _this.components[containerName]) {
     _this.app.component(containerName, containerList[path].default)
   }
@@ -84,7 +81,7 @@ for (const path in containerList) {
 
 for (const path in componentList) {
   const name = path.match(/([A-Za-z0-9_-]+)/g)[1]
-  const componentName = `Ma${toHump(name)}`
+  const componentName = `Easy${toHump(name)}`
   if (! _this.components[componentName]) {
     _this.app.component(componentName, componentList[path].default)
   }
